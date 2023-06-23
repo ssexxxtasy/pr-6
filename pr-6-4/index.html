@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<BODY BGCOLOR="#EEEEFF">
+<H1>Форма для реєстрації користувача</H1>
+<FORM METHOD=GET name="form1" >
+    <TABLE BORDER=0>
+        <TR>
+            <TD ALIGN="center">Ім'я:</TD>
+            <TD ALIGN="RIGHT" ><INPUT TYPE="TEXT" NAME="NM" SIZE=11></TD>
+        </TR>
+        <TR>
+            <TD ALIGN="center">Пароль:</TD>
+            <TD ALIGN="RIGHT"><INPUT TYPE="PASSWORD" id="pass1" SIZE=11></TD>
+        </TR>
+        <TR>
+            <TD ALIGN="LEFT">Повторіть Пароль:</TD>
+            <TD ALIGN="RIGHT"><INPUT TYPE="PASSWORD" id="pass2" SIZE=11></TD>
+        </TR>
+        <TR ALIGN="CENTER">
+            <TD ALIGN="LEFT"> <INPUT TYPE="SUBMIT" VALUE="Передати" onclick="perevirka()"></TD>
+            <TD ALIGN="RIGHT"> <INPUT TYPE="RESET" VALUE= "Очистити"></TD>
+        </TR>
+    </TABLE>
+</FORM>
+
+<script>
+    function perevirka(){
+        var userpass1 = document.getElementById('pass1').value;
+        var userpass2 = document.getElementById('pass2').value;
+
+        if (userpass1 == userpass2){
+            window.open( "zaglushka.html");
+        }
+        else {
+
+            alert("Паролі не співпадають!")
+        }
+    }
+</script>
+</BODY>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form name="form1">
+    Скільки буде 15/3
+</form>
+
+<div class="scrollable-list">
+    <ul>
+        <li onclick="funct1(5); checkOnHover()">5</li>
+        <li onclick="funct1(3); checkOnHover()">3</li>
+        <li onclick="funct1(15); checkOnHover()">15</li>
+    </ul>
+</div>
+
+<script>
+    var i = 0;
+
+    function funct1(value) {
+        i += parseInt(value);
+    }
+
+    function checkOnHover() {
+        if (i == 5) {
+            alert("Вірно");
+        } else {
+            alert("Не вірно");
+        }
+        i = 0;
+    }
+</script>
+
+<style>
+    .scrollable-list {
+        width: 100px;
+        overflow-y: scroll;
+        border: 1px solid black;
+    }
+    .scrollable-list ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .scrollable-list ul li {
+        cursor: pointer;
+    }
+
+    .scrollable-list ul li:hover {
+        background-color: lightgray;
+    }
+</style>
+
+</body>
+</html>
+

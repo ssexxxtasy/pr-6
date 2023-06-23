@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form name="form1">
+<table>
+    <thead>
+    <tr>
+        <td>x2</td>
+        <td>x1</td>
+        <td>y</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    </tbody>
+</table>
+</form>
+
+<h4>Виберіть відповідь із запропонованого списка</h4>
+
+<div class="scrollable-list">
+    <ul>
+        <li onmouseover="funct1(0); checkOnHover()">Елемент І (кон'юнкція)</li>
+        <li onmouseover="funct1(0); checkOnHover()">Елемент АБО (диз'юнкція)</li>
+        <li onmouseover="funct1(0); checkOnHover()">Елемент ВИКЛЮЧАЮЧЕ АБО (нерівнозначність)</li>
+        <li onmouseover="funct1(0); checkOnHover()">Елемент АБО-НЕ (стрілка Пірса)</li>
+        <li onmouseover="funct1(0); checkOnHover()">Елемент І-НЕ (штрих Шеффера)</li>
+        <li onmouseover="funct1(1); checkOnHover()">Елемент ВИКЛЮЧАЮЧЕ АБО-НЕ (рівнозначність)</li>
+    </ul>
+</div>
+
+
+<style>
+    .scrollable-list {
+        width: 300px;
+        height: 100px;
+        overflow-y: scroll;
+        border: 1px solid black;
+    }
+    .scrollable-list ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .scrollable-list ul li {
+        cursor: pointer;
+    }
+
+    .scrollable-list ul li:hover {
+        background-color: lightgray;
+    }
+</style>
+
+<script>
+    var i = 0;
+    function funct1(value) {
+        i += parseInt(value);
+    }
+
+    function checkOnHover() {
+        if (i == 1) {
+            alert("Вірно");
+        } else {
+            alert("Не вірно");
+        }
+        i = 0;
+    }
+</script>
+
+</body>
+</html>
